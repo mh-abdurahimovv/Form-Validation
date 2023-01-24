@@ -48,7 +48,7 @@ form.addEventListener('submit', (e) => {
 
      else if  (password.value.length > 5) {
         message = 'Password is strong enough:)';
-        color = 'Green'
+        color = 'green'
 
     } 
     passwordMessage.innerHTML = message,
@@ -56,22 +56,22 @@ form.addEventListener('submit', (e) => {
     
 
 
-
      // SecondPassword validation
-     message = '',
-     color = ''; 
+     message = 'Passwords do not match!',
+     color = 'red'; 
 
     if (passwordTwo.value === password.value) {
         message = 'Passwords match!'
         color = 'green';
 
-    } else if (passwordTwo.value != password.value) {
-        message = 'Passwords do not match(:'
+    } else if (passwordTwo.value !== password.value) {
+        message = 'Passwords do not match(:';
         color = 'red';
 
-    } else {
-        small4.innerHTML = ''
-    }
+    } 
+    secondPasswordMessage.innerHTML = message;
+    secondPasswordMessage.style.color = color;
+
 
 
     e.preventDefault ();
